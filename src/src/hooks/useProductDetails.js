@@ -14,7 +14,6 @@ const useProductDetails = (productId) => {
       url: `http://localhost:8080/product/${productId}`,
       cancelToken: new axios.CancelToken(_cancelToken => cancelToken = _cancelToken)
     }).then(({ data }) => {
-      console.log(data)
       setLoading(false)
       setProductDetails(data)
     }).catch((err) => {
